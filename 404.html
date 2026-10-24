@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Page not found — ScholarHub Pro" />
+    <title>404 — ScholarHub Pro</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import { bootstrap, icon } from '/js/script.js'
+      bootstrap('404')
+      document.getElementById('app').innerHTML = `
+        <div class="err-wrap">
+          <div class="float-shape" style="width:300px;height:300px;background:radial-gradient(circle,rgba(37,99,235,.3),transparent 70%);top:10%;left:10%"></div>
+          <div class="float-shape" style="width:260px;height:260px;background:radial-gradient(circle,rgba(79,70,229,.3),transparent 70%);bottom:10%;right:10%;animation-delay:-2s"></div>
+          <div style="position:relative;z-index:2">
+            <div class="err-code">404</div>
+            <h2>Page Not Found</h2>
+            <p>The page you're looking for may have moved, been renamed, or never existed. Let's get you back on track.</p>
+            <div class="wrap" style="justify-content:center">
+              <a href="/" class="btn btn-lg">${icon('home', 'btn-icon')} Back to Home</a>
+              <a href="/scholarships" class="btn btn-ghost btn-lg">${icon('search', 'btn-icon')} Browse Scholarships</a>
+            </div>
+            <div style="margin-top:var(--sp-4);display:flex;flex-direction:column;gap:8px;max-width:280px;margin-inline:auto">
+              <a href="/apply" style="color:var(--text-3);font-size:0.9rem">→ Apply for a scholarship</a>
+              <a href="/dashboard" style="color:var(--text-3);font-size:0.9rem">→ Go to your dashboard</a>
+              <a href="/contact" style="color:var(--text-3);font-size:0.9rem">→ Contact support</a>
+            </div>
+          </div>
+        </div>
+      `
+    </script>
+  </body>
+</html>
